@@ -9,7 +9,7 @@ const NotesList = ({ notes, onDelete, keyword, onArchive }) => {
         {notes
           .filter(note => {
             if (keyword) {
-              return note.title.toLowerCase().includes(keyword);
+              return note.title.toLowerCase().includes(keyword.toLowerCase());
             }
             return note.archived === false;
           })
